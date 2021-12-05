@@ -156,6 +156,8 @@ def delete_password_not_recognised():
 
 def delete_user_not_found_screen():
     user_not_found_screen.destroy()
+    
+    
 
 
 # Designing Main(first) window
@@ -175,5 +177,6 @@ def main_account_screen(frmmain):
 
 root = Tk()
 main_account_screen(root)
+
 
 root.mainloop()
