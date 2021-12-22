@@ -9,20 +9,20 @@ test_dataset = pd.read_csv('Testing.csv')
 
 # Slicing and Dicing the dataset to separate features from predictions
 X = training_dataset.iloc[:, 0:132].values
-# print(X)
+
 y = training_dataset.iloc[:, -1].values
-# print(y)
+
 
 # Dimensionality Reduction for removing redundancies
 dimensionality_reduction = training_dataset.groupby(training_dataset['prognosis']).max()
-# print(dimensionality_reduction)
+
 
 # Encoding String values to integer constants
 from sklearn.preprocessing import LabelEncoder
 
 labelencoder = LabelEncoder()
 y = labelencoder.fit_transform(y)
-# print(y)
+
 
 # Splitting the dataset into training set and test set
 from sklearn.model_selection import train_test_split
@@ -53,22 +53,21 @@ def execute_bot():
     print("Please reply with yes/Yes or no/No for the following symptoms")
 
     def print_disease(node):
-        # print(node)
+
         node = node[0]
-        # print(len(node))
+
         val = node.nonzero()
-        # print(val)
+
         disease = labelencoder.inverse_transform(val[0])
         return disease
 
     def tree_to_code(tree, feature_names):
         tree_ = tree.tree_
-        # print(tree_)
+
         feature_name = [
             feature_names[i] if i != _tree.TREE_UNDEFINED else "undefined!"
             for i in tree_.feature
         ]
-        # print("def tree({}):".format(", ".join(feature_names)))
         symptoms_present = []
 
         def recurse(node, depth):
@@ -107,7 +106,7 @@ def execute_bot():
                 print('Consult ', str(row['name'].values))
                 print()
                 print('Visit ', str(row['link'].values))
-                # print(present_disease[0])
+
 
         recurse(0, 1)
 
@@ -135,6 +134,4 @@ record = doctors[doctors['disease'] == 'AIDS']
 record['name']
 record['link']
 
-# Execute the bot and see it in Action
 execute_bot()
-
