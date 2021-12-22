@@ -113,8 +113,6 @@ def execute_bot():
     tree_to_code(classifier, cols)
 
 
-# This section of code to be run after scraping the data
-
 doc_dataset = pd.read_csv('doctors_dataset.csv', names=['Name', 'Description'])
 
 diseases = dimensionality_reduction.index
