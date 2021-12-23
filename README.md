@@ -53,4 +53,4 @@ import pandas
 import matplotlib
 
 
-If no errors appeared then the installation is done correctly. Then, Go to your directory and run the file QuestionDiagonosisTkinter.py
+If no errors appeared then the installation is done correctly. Then, Go to your directory and run the file Main_console.py
