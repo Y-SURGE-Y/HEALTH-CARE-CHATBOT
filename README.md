@@ -1,4 +1,4 @@
-People who haven’t heard about chatbots yet might think what is the motive behind creating artificial intelligence chatbots. Here is the answer to this question.
+People who haven’t heard about chatbots yet might think what is the motive behind creating artificial intelligence chatbots.
 A Chatbot can be used for countless purposes such as:
 Sends relevant content about the topics you’re interested in:
 Bots can help you get information about latest happenings around you as soon as they are published.
